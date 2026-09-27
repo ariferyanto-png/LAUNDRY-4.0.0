@@ -740,10 +740,7 @@ function setupForm() {
         paymentDate: null
       };
 
-      // 1. KIRIM LANGSUNG KE GOOGLE SHEETS
-      fetch(WEB_APP_URL, {
-        method: "POST",
-              // 1. KIRIM LANGSUNG KE GOOGLE SHEETS
+            // 1. KIRIM LANGSUNG KE GOOGLE SHEETS
       fetch(WEB_APP_URL, {
         method: "POST",
         mode: "no-cors",
@@ -751,9 +748,6 @@ function setupForm() {
         body: JSON.stringify(transaction) 
       }).catch(err => console.log(err));
       
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(transaction) 
-      }).catch(err => console.log(err));
 
       // 2. SIMPAN KE MEMORI HP
       transactions.unshift(transaction);
