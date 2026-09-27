@@ -778,29 +778,6 @@ function setupForm() {
       }
     });
   }
-}
-
-
-
-  const cancelForm = document.getElementById("cancelForm");
-  if (cancelForm) {
-    cancelForm.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const reason = document.getElementById("cancelReason").value.trim();
-      const item = transactions.find(t => t.id === activeTransactionId);
-      if (item) {
-        item.status = "Batal";
-        item.cancelReason = reason;
-        saveData();
-        renderAll();
-        closeCancelModal();
-        openTransactionDetail(activeTransactionId);
-        showToast("Transaksi berhasil dibatalkan");
-      }
-    });
-  }
-}
-
 
 function renderAll() {
   updateDashboard();
