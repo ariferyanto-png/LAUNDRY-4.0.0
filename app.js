@@ -1,4 +1,4 @@
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby4ha5vbiK2zlIvs3GJ3mvc_ag66xnxxLFnXHfh72SRT0AF2_hshIJZmLDrfYHj_TsATQ/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyNt6A7kNbuPNLNAEIUVraSbgufzwRYGP6Unhgpk9TtvK7AR3lnHv_PDlNA5DY1Lf9C4Q/exec";
 
 
 const safeStorage = {
@@ -743,6 +743,14 @@ function setupForm() {
       // 1. KIRIM LANGSUNG KE GOOGLE SHEETS
       fetch(WEB_APP_URL, {
         method: "POST",
+              // 1. KIRIM LANGSUNG KE GOOGLE SHEETS
+      fetch(WEB_APP_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(transaction) 
+      }).catch(err => console.log(err));
+      
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(transaction) 
       }).catch(err => console.log(err));
