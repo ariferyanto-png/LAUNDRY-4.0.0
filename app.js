@@ -778,6 +778,7 @@ function setupForm() {
       }
     });
   }
+}
 
 function renderAll() {
   updateDashboard();
